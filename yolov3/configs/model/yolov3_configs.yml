@@ -1,0 +1,4 @@
+n_grid_cells: 32
+n_classes: 1
+n_anchor_bboxes: 1
+head: darknet53

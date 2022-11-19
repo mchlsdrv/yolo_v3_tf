@@ -1,0 +1,38 @@
+version: 1
+formatters:
+  warning:
+    class: logging.Formatter
+    format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+    datefmt: '%d/%b/%y %H:%M:%S'
+  error:
+    class: logging.Formatter
+    format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+    datefmt: '%d/%b/%y %H:%M:%S'
+handlers:
+  console:
+    class: logging.StreamHandler
+    level: DEBUG
+    formatter: warning
+    stream: ext://sys.stdout
+  logfile:
+    class: logging.FileHandler
+    level: ERROR
+    formatter: error
+    filename: ./logs.log
+    mode: w
+loggers:
+  __main__:
+    level: INFO
+    handlers: [console, logfile]
+    propagate: no
+  warrningLogger:
+    level: DEBUG
+    handlers: [console]
+    propagate: no
+  errorLogger:
+    level: DEBUG
+    handlers: [logfile]
+    propagate: no
+root:
+  level: DEBUG
+  handlers: [console, logfile]

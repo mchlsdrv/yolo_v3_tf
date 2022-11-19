@@ -1,0 +1,4 @@
+drop_block:
+  use: True
+  keep_prob: 0.9
+  block_size: 7

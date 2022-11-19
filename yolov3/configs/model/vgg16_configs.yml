@@ -1,0 +1,36 @@
+conv2d_1:
+  filters: 64
+  kernel_size: [3, 3]
+  strides: [1, 1]
+  dilation_rate: [1, 1]
+  activation: swish
+  padding: same
+conv2d_2:
+  filters: 128
+  kernel_size: [3, 3]
+  strides: [1, 1]
+  dilation_rate: [1, 1]
+  activation: swish
+  padding: same
+conv2d_3:
+  filters: 256
+  kernel_size: [3, 3]
+  strides: [1, 1]
+  dilation_rate: [1, 1]
+  activation: swish
+  padding: same
+conv2d_4:
+  filters: 512
+  kernel_size: [3, 3]
+  strides: [1, 1]
+  dilation_rate: [1, 1]
+  activation: swish
+  padding: same
+max_pool2d:
+  pool_size: [2, 2]
+  strides: [2, 2]
+dense_layer:
+  units: 4096
+  activation: swish
+output_layer:
+  activation: swish
